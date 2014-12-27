@@ -1,0 +1,23 @@
+.thumb {
+    position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.project-image {
+	display: inline-block;
+	width: 100%;
+	height: 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+}
+
+.project-video {
+	width: 100%;
+	height: 60%;
+}
