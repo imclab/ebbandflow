@@ -10,7 +10,7 @@ var multer = require('multer');
 //server.listen(1337);
 
 //app.use(express.static(__dirname + '/public'));
-app.use(express.static('src/public'));
+app.use(express.static('src/public/index.html'));
 
 server.listen(1337, function() {
 	console.log('listening on *:1337');
