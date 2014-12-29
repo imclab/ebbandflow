@@ -6,7 +6,7 @@ var request = require('request');
 //var http = require('http');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var config = require('config');
+//var config = require('config');
 
 //server.listen(1337);
 
