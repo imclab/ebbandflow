@@ -13,9 +13,13 @@ var config = require('config');
 //app.use(express.static(__dirname + '/public'));
 app.use(express.static('src/public/'));
 
-server.listen(1337, function() {
-	console.log('listening on *:1337');
+server.listen(80, function() {
+	console.log('listening on *:80');
 });
+
+// server.listen(1337, function() {
+// 	console.log('listening on *:1337');
+// });
 
 server.on('connection', function(socket) {
 	console.log('new connection');
