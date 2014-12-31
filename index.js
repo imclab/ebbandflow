@@ -6,20 +6,22 @@ var request = require('request');
 //var http = require('http');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var config = require('config');
+//var config = require('config');
 
 //server.listen(1337);
 
 //app.use(express.static(__dirname + '/public'));
-app.use(express.static('src/public/'));
+app.use(express.static('public/'));
 
-server.listen(80, function() {
-	console.log('listening on *:80');
-});
-
-// server.listen(1337, function() {
-// 	console.log('listening on *:1337');
+//port used for deployment
+// server.listen(80, function() {
+// 	console.log('listening on *:80');
 // });
+
+//port used for development
+server.listen(1337, function() {
+	console.log('listening on *:1337');
+});
 
 server.on('connection', function(socket) {
 	console.log('new connection');
