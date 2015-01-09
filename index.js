@@ -14,14 +14,14 @@ var multer = require('multer');
 app.use(express.static('public/'));
 
 //port used for deployment
-server.listen(80, function() {
-	console.log('listening on *:80');
-});
+// server.listen(80, function() {
+// 	console.log('listening on *:80');
+// });
 
 //port used for development
-// server.listen(1337, function() {
-// 	console.log('listening on *:1337');
-// });
+server.listen(1337, function() {
+	console.log('listening on *:1337');
+});
 
 server.on('connection', function(socket) {
 	console.log('new connection');
