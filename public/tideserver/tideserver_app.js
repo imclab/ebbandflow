@@ -8,13 +8,13 @@ var App = {
 	socket: null,
 
 	endpoints: {
-		'sandyhook_nj': 'localhost:1337/sandyhook_nj',
-		'village_cove_alaska': 'localhost:1337/village_cove_alaska',
-		'nikika_alaska': 'localhost:1337/nikika_alaska',
-		'key_west_fl': 'localhost:1337/key_west_fl',
-		'honolulu_hi': 'localhost:1337/honolulu_hi',
-		'seattle_wa': 'localhost:1337/seattle_wa',
-		'pt_reyes_ca': 'localhost:1337/pt_reyes_ca'
+		'sandyhook_nj': 'localhost:80/sandyhook_nj',
+		'village_cove_alaska': 'localhost:80/village_cove_alaska',
+		'nikika_alaska': 'localhost:80/nikika_alaska',
+		'key_west_fl': 'localhost:80/key_west_fl',
+		'honolulu_hi': 'localhost:80/honolulu_hi',
+		'seattle_wa': 'localhost:80/seattle_wa',
+		'pt_reyes_ca': 'localhost:80/pt_reyes_ca'
 	},
 
 	init: function() {
@@ -44,7 +44,7 @@ var App = {
 	},
 
 	getRealtimeWaterlevel: function() {
-	    var socket = io('http://localhost:1337');
+	    var socket = io('http://localhost:80');
 
 	    socket.on('realtimeWaterLevel', function(data) {
 			var d = JSON.parse(data);
@@ -62,7 +62,8 @@ var App = {
 	changeOptions: function(obj) {
 
 		$.ajax({
-			url: 'http://localhost:1337/api/changeParameters',
+			// url: 'http://localhost:1337/api/changeParameters',
+			url: 'http://localhost:80/api/changeParameters',
 			type: 'POST',
 			dataType: 'JSON',
 			data: {
