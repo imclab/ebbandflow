@@ -1,0 +1,38 @@
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/tideserver_styles.css">
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	
+</head>
+
+<body>
+	<div name="form" class="app">
+		<form name="inputForm">
+			<select name="stationLocation">
+				<option name="sandyhook_nj" value="sandyhook_nj">Sandy Hook, NJ
+				<option name="village_cove_alaska" value="village_cove_alaska">Village Cove, Alaska
+				<option name="nikika_alaska" value="nikika_alaska">Nikiska, Alaska
+				<option name="key_west_fl" value="key_west_fl">Key West, Florida
+				<option name="honolulu_hi" value="honolulu_hi">Honolulu, Hawaii
+				<option name="seattle_wa" value="seattle_wa">Seattle, Washington
+				<option name="pt_reyes_ca" value="pt_reyes_ca">Point Reyes, California
+			</select>
+			<br>
+			<input type="button" name="submit" value="Submit">
+
+		</form>
+	</div>
+
+	<div id="scatterPlot">
+	</div>
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="/tideserver_app.js"></script>
+
+</body>
+
+</html>
