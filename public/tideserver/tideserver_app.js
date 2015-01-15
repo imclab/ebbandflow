@@ -7,6 +7,7 @@ var App = {
 
 	socket: null,
 
+	//endpoints for deployment
 	endpoints: {
 		'sandyhook_nj': '72.2.112.178:80/sandyhook_nj',
 		'village_cove_alaska': '72.2.112.178:80/village_cove_alaska',
@@ -16,6 +17,17 @@ var App = {
 		'seattle_wa': '72.2.112.178:80/seattle_wa',
 		'pt_reyes_ca': '72.2.112.178:80/pt_reyes_ca'
 	},
+
+	//endpoints for localhost
+	// endpoints: {
+	// 	'sandyhook_nj': 'localhost:1337/sandyhook_nj',
+	// 	'village_cove_alaska': 'localhost:1337/village_cove_alaska',
+	// 	'nikika_alaska': 'localhost:1337/nikika_alaska',
+	// 	'key_west_fl': 'localhost:1337/key_west_fl',
+	// 	'honolulu_hi': 'localhost:1337/honolulu_hi',
+	// 	'seattle_wa': 'localhost:1337/seattle_wa',
+	// 	'pt_reyes_ca': 'localhost:1337/pt_reyes_ca'
+	// },
 
 	init: function() {
 		var _this = this;

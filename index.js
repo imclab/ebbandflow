@@ -16,7 +16,6 @@ server.listen(80, function() {
 	console.log('listening on *:80');
 });
 
-//port used for development
 // server.listen(1337, function() {
 // 	console.log('listening on *:1337');
 // });
@@ -39,7 +38,7 @@ var _intervals = {};
 
 var getDataInterval = 1 * 1000; 
 
-var hours = 20;
+var hours = 600;
 
 var _endpoints = {
 	'sandyhook_nj': 'http://tidesandcurrents.noaa.gov/api/datagetter?range=' + hours + '&station=8531680&product=water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
@@ -144,8 +143,8 @@ var getRealtimeData = {
 						
 						//parse and log
 						var d = JSON.parse(body);
-						//console.log(d);
-						console.log(d.metadata.name + ': ' + ' ' + d.data[0].v);
+						// console.log(d);
+						//console.log(d.metadata.name + ': ' + ' ' + d.data[0].v);
 					}
 			});
 		}
