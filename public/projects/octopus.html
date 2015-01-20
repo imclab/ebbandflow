@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<title>Octopus Ink</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/nav-style.css" />
 	<link rel="stylesheet" type="text/css"
@@ -48,6 +49,13 @@
 	    </div>
 	</nav>
 
+	<nav class="menu slide-menu-bottom">
+	    <div id="about">
+	    	<button class="close-menu">Close ↓</button>
+	    	<div id="aboutContent"></div>
+	    </div>
+	</nav>
+	
 	<nav class="menu slide-menu-right">
 	    <div class="project-description">
 	        <button class="close-menu">Close &rarr;</button>
@@ -63,6 +71,11 @@
 	<!-- javascript -->
 	<script type="text/javascript" src="../js/classie.js"></script>
 	<script type="text/javascript" src="../js/nav.js"></script>
+	<script> 
+	    $(function(){
+	      $("#aboutContent").load("../inc/about.html"); 
+	    });
+	</script>
 	<!-- end javascript -->
 </body>
 </html>

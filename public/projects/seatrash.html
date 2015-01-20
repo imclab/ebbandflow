@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<title>Seatrash</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/nav-style.css" />
 	<link rel="stylesheet" type="text/css"
@@ -41,12 +42,7 @@
 	<nav class="menu slide-menu-bottom">
 	    <div id="about">
 	    	<button class="close-menu">Close ↓</button>
-	    	<p>Daniel Baker lives and works in New York City.
-	    	 <br>
-	    	 His commercial work can be viewed at 
-	    	 <a class="about-link" href="http://crysalys.net">Crysalys.net</a></p>
-	    	<br>
-	    	<p>To get in touch, email: <a class="about-link" href='mail&#116;&#111;&#58;info&#64;dn%62&#107;&#114;&#46;%63&#37;6F&#109;'>&#105;&#110;f&#111;&#64;d&#110;b&#107;r&#46;co&#109;</a></p>
+	    	<div id="aboutContent"></div>
 	    </div>
 	</nav>
 
@@ -66,6 +62,11 @@
 	<!-- javascript -->
 	<script type="text/javascript" src="../js/classie.js"></script>
 	<script type="text/javascript" src="../js/nav.js"></script>
+	<script> 
+	    $(function(){
+	      $("#aboutContent").load("../inc/about.html"); 
+	    });
+	</script>
 	<!-- end javascript -->
 </body>
 </html>
