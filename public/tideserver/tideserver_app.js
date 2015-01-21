@@ -9,13 +9,13 @@ var App = {
 
 	//endpoints for deployment
 	endpoints: {
-		'sandyhook_nj': '72.2.112.178:80/sandyhook_nj',
-		'village_cove_alaska': '72.2.112.178:80/village_cove_alaska',
-		'nikika_alaska': '72.2.112.178:80/nikika_alaska',
-		'key_west_fl': '72.2.112.178:80/key_west_fl',
-		'honolulu_hi': '72.2.112.178:80/honolulu_hi',
-		'seattle_wa': '72.2.112.178:80/seattle_wa',
-		'pt_reyes_ca': '72.2.112.178:80/pt_reyes_ca'
+		'sandyhook_nj': '165.225.131.134:80/sandyhook_nj',
+		'village_cove_alaska': '165.225.131.134:80/village_cove_alaska',
+		'nikika_alaska': '165.225.131.134:80/nikika_alaska',
+		'key_west_fl': '165.225.131.134:80/key_west_fl',
+		'honolulu_hi': '165.225.131.134:80/honolulu_hi',
+		'seattle_wa': '165.225.131.134:80/seattle_wa',
+		'pt_reyes_ca': '165.225.131.134:80/pt_reyes_ca'
 	},
 
 	//endpoints for localhost
