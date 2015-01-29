@@ -12,13 +12,13 @@ app.use(express.static('public/'));
 app.use(express.static('apps/tideserver/public/'));
 
 //port used for deployment
-server.listen(80, function() {
-	console.log('listening on *:80');
-});
-
-// server.listen(1337, function() {
-// 	console.log('listening on *:1337');
+// server.listen(80, function() {
+// 	console.log('listening on *:80');
 // });
+
+server.listen(1337, function() {
+	console.log('listening on *:1337');
+});
 
 server.on('connection', function(socket) {
 	console.log('new connection');

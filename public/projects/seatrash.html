@@ -12,26 +12,20 @@
     href="../css/mobile.css" />
 </head>
 <body>
-	<!-- MAIN MENU -->
-	<div id="menu">
-		<button onclick="location.href='/index.html'">
-    	projects</button>
-		<button class="nav-toggler toggle-slide-bottom">about</button>
-		<a class="about-link" href='mail&#116;&#111;&#58;info&#64;dn%62&#107;&#114;&#46;%63&#37;6F&#109;'>&#105;&#110;f&#111;&#64;d&#110;b&#107;r&#46;co&#109;</a>
 
-		<div id="logo">
-			<span>DNBKR</span>
-			<div class="description-button">
-				<button class="nav-toggler toggle-slide-right">project description</button>
-			</div>
-		</div>
-		
+	<div id="menu">
 	</div>
 
-	
 	<div class="container">
-		<div class="project-image" style="background-image: url(../img/seatrash_green.jpg)">
+		<div class="project-image" style="background-image: url(../img/green_textures.jpg)">
 		</div>
+
+		<iframe class="project-video" src="//player.vimeo.com/video/117644107?color=ff0179&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+		</iframe>
+
+		<div class="project-image" style="background-image: url(../img/seatrash_spin.gif)">
+		</div>
+
 		<div class="project-image" style="background-image: url(../img/seatrash_milkjug.jpg)">
 		</div>
 		<div class="project-image" style="background-image: url(../img/seatrash_clear.jpg)">
@@ -62,9 +56,13 @@
 	<!-- javascript -->
 	<script type="text/javascript" src="../js/classie.js"></script>
 	<script type="text/javascript" src="../js/nav.js"></script>
+	
 	<script> 
 	    $(function(){
 	      $("#aboutContent").load("../inc/about.html"); 
+	    });
+	    $(function(){
+	      $("#menu").load("../inc/menu.html"); 
 	    });
 	</script>
 	<!-- end javascript -->
