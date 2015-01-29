@@ -55,6 +55,18 @@ body {
 	font-size: 14px;
 }
 
+#email_signup {
+	width: 40%;
+	height: 50%;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 5%;
+	/*border: 2px solid red;*/
+	/*background:#fff;*/ 
+	clear:left; 
+	font:12px Helvetica,Arial,sans-serif;
+}
+
 a.about-link {
 	color: #0080FF;
 	text-decoration: none;
