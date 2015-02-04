@@ -1,6 +1,7 @@
 body {
   margin: 0;
   /*background: rgba(44,121,221,1);*/
+  /*background: rgba(0,255,0,1);*/
   /*background: rgb(216,204,249); /* Old browsers */
   /*background: -moz-linear-gradient(left,  rgba(216,204,249,1) 2%, rgba(44,121,221,1) 99%); /* FF3.6+ */
   /*background: -webkit-gradient(linear, left top, right top, color-stop(2%,rgba(255,255,255,1)), color-stop(99%,rgba(44,121,221,1))); /* Chrome,Safari4+ */
@@ -9,6 +10,8 @@ body {
   /*background: -ms-linear-gradient(left,  rgba(216,204,249,1) 2%,rgba(44,121,221,1) 99%); /* IE10+ */
   background: linear-gradient(to top,  rgba(0,0,0,1) 2%,rgba(44,121,221,1) 100%); /* W3C */
   /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8ccf9', endColorstr='#2c79dd',GradientType=1 ); /* IE6-9 */
+  /*background: red;*/
+
 }
 
 .app {
@@ -43,4 +46,5 @@ body {
 
 .plotPoints {
 	fill: pink;
+	/*fill: black;*/
 }

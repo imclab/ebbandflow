@@ -57,6 +57,7 @@ var App = {
 
 	getRealtimeWaterlevel: function() {
 	    var socket = io('http://72.2.112.178:80');
+	    // var socket = io('http://localhost:1337');
 
 	    socket.on('realtimeWaterLevel', function(data) {
 			var d = JSON.parse(data);
@@ -121,6 +122,8 @@ var App = {
 	},
 
 	processData: function(data) {
+		console.log('test');
+		
 		var d = JSON.parse(data);
 
 		var dataset = [];
