@@ -117,15 +117,24 @@ var getRealtimeData = {
 	interval: 1000,
 
 	realtime: [
+		//Sandy Hook
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=8531680&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		//Nikiska, AK
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9464212&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		//Village Cove, AK
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9455760&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		//Key West
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=8724580&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		//Honolulu
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=1612340&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		//Seattle
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9447130&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		//pt reyes
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9415020&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		//Port Aransas, Tx
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=8775237&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
-		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9087079&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json'
+		//San Diego
+		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9410230&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json'
 	],
 
 	// realtime: [
