@@ -36,7 +36,7 @@ server.on('connection', function(socket) {
 var _channels = {};
 var _intervals = {};
 
-var getDataInterval = 1 * 0; 
+var getDataInterval = 1 * 10000; 
 
 var hours = 200;
 
@@ -124,7 +124,7 @@ var getRealtimeData = {
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=1612340&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9447130&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9415020&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
-		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9415020&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
+		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=8775237&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',
 		'http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=9087079&product=one_minute_water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json'
 	],
 
@@ -173,7 +173,7 @@ var getRealtimeData = {
 						
 						//parse and log
 						var d = JSON.parse(body);
-						console.log('emit');
+						//console.log('emit');
 						//console.log(d.metadata.name + ': ' + ' ' + d.data[0].v);
 					}
 			});
