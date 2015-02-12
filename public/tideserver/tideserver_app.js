@@ -8,26 +8,26 @@ var App = {
 	socket: null,
 
 	//endpoints for deployment
-	endpoints: {
-		'sandyhook_nj': '165.225.131.134:80/sandyhook_nj',
-		'village_cove_alaska': '165.225.131.134:80/village_cove_alaska',
-		'nikika_alaska': '165.225.131.134:80/nikika_alaska',
-		'key_west_fl': '165.225.131.134:80/key_west_fl',
-		'honolulu_hi': '165.225.131.134:80/honolulu_hi',
-		'seattle_wa': '165.225.131.134:80/seattle_wa',
-		'pt_reyes_ca': '165.225.131.134:80/pt_reyes_ca'
-	},
+	// endpoints: {
+	// 	'sandyhook_nj': '165.225.131.134:80/sandyhook_nj',
+	// 	'village_cove_alaska': '165.225.131.134:80/village_cove_alaska',
+	// 	'nikika_alaska': '165.225.131.134:80/nikika_alaska',
+	// 	'key_west_fl': '165.225.131.134:80/key_west_fl',
+	// 	'honolulu_hi': '165.225.131.134:80/honolulu_hi',
+	// 	'seattle_wa': '165.225.131.134:80/seattle_wa',
+	// 	'pt_reyes_ca': '165.225.131.134:80/pt_reyes_ca'
+	// },
 
 	//endpoints for localhost
-	// endpoints: {
-	// 	'sandyhook_nj': 'localhost:1337/sandyhook_nj',
-	// 	'village_cove_alaska': 'localhost:1337/village_cove_alaska',
-	// 	'nikika_alaska': 'localhost:1337/nikika_alaska',
-	// 	'key_west_fl': 'localhost:1337/key_west_fl',
-	// 	'honolulu_hi': 'localhost:1337/honolulu_hi',
-	// 	'seattle_wa': 'localhost:1337/seattle_wa',
-	// 	'pt_reyes_ca': 'localhost:1337/pt_reyes_ca'
-	// },
+	endpoints: {
+		'sandyhook_nj': 'localhost:1337/sandyhook_nj',
+		'village_cove_alaska': 'localhost:1337/village_cove_alaska',
+		'nikika_alaska': 'localhost:1337/nikika_alaska',
+		'key_west_fl': 'localhost:1337/key_west_fl',
+		'honolulu_hi': 'localhost:1337/honolulu_hi',
+		'seattle_wa': 'localhost:1337/seattle_wa',
+		'pt_reyes_ca': 'localhost:1337/pt_reyes_ca'
+	},
 
 	init: function() {
 		var _this = this;
@@ -189,13 +189,13 @@ var App = {
 	      var xAxis = d3.svg.axis()
 	                  .scale(xScale)
 	                  .orient("bottom")
-	                  .ticks(5);
+	                  .ticks(10);
 
 	      //define Y Axis
 	      var yAxis = d3.svg.axis()
 	                  .scale(yScale)
 	                  .orient("left")
-	                  .ticks(5);
+	                  .ticks(10);
 
 	      //add the circle plot
 	      svg.selectAll("circle")
@@ -224,7 +224,9 @@ var App = {
 	      svg.append("g")
 	          .attr("class", "axis")
 	          .attr("transform", "translate(" + padding + ", 0)")
-	          .call(yAxis);         
+	          .call(yAxis);  
+
+
 	    },
 
 	    formatDate: function(date) {

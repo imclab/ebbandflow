@@ -3,13 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<title>Seatrash</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<title>Ebb + Flow</title>
+	
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/nav-style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/tideserver_style.css">
 	<link rel="stylesheet" type="text/css"
     media="screen and (max-width: 600px)"
     href="../css/mobile.css" />
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 
@@ -18,18 +23,60 @@
 
 	<div class="container">
 
-		<div class="project-image-dark" style="background-image: url(../img/green_textures.jpg)">
+		<div class="project-image-dark" style="background-image: url(../img/ebbandflow/green_textures.jpg)">
 		</div>
 
-		<iframe class="project-video" src="//player.vimeo.com/video/117644107?color=ff0179&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-		</iframe>
+		<iframe class="project-video" src="//player.vimeo.com/video/118722807?color=ff0179&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-		<div class="project-image-dark" style="background-image: url(../img/seatrash_spin.gif)">
+		<div id="tide">
+			<div name="form" class="app">
+				<form name="inputForm">
+					<select name="stationLocation">
+						<option name="sandyhook_nj" value="sandyhook_nj">Sandy Hook, NJ
+						<option name="village_cove_alaska" value="village_cove_alaska">Village Cove, Alaska
+						<option name="nikika_alaska" value="nikika_alaska">Nikiska, Alaska
+						<option name="key_west_fl" value="key_west_fl">Key West, Florida
+						<option name="honolulu_hi" value="honolulu_hi">Honolulu, Hawaii
+						<option name="seattle_wa" value="seattle_wa">Seattle, Washington
+						<option name="pt_reyes_ca" value="pt_reyes_ca">Point Reyes, California
+					</select>
+					<br>
+					<input type="button" name="submit" value="Submit">
+
+				</form>
+			</div>
+
+			<div id="scatterPlot">
+			</div>
 		</div>
 
-		<div class="project-image-dark" style="background-image: url(../img/seatrash_milkjug.jpg)">
+		<iframe class="project-video" src="//player.vimeo.com/video/117644107?color=ff0179&byline=0&portrait=0" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		
+		<div class="project-image" style="background-image: url(../img/ebbandflow/seatrash_clear.jpg)">
 		</div>
-		<div class="project-image-dark" style="background-image: url(../img/seatrash_clear.jpg)">
+
+		<!-- <div class="project-image-dark" style="background-image: url(../img/ebbandflow/seatrash_milkjug.gif)">
+		</div> -->
+
+		<div class="project-image" style="background-image: url(../img/ebbandflow/seatrash_milkjug.jpg)">
+		</div>
+
+		<!-- <div class="project-image-dark" style="background-image: url(../img/ebbandflow/seatrash_green.gif)">
+		</div> -->
+
+		<div class="project-image" style="background-image: url(../img/ebbandflow/seatrash_green_medium.jpg)">
+		</div>
+
+		<div class="project-image" style="background-image: url(../img/ebbandflow/seatrash_foam.jpg)">
+		</div>
+
+		<div class="project-image" style="background-image: url(../img/ebbandflow/seatrash_green.jpg)">
+		</div>
+
+		<div class="project-image-dark" style="background-image: url(../img/ebbandflow/seatrash_clear.gif)">
+		</div>
+
+		<div class="project-image-dark" style="background-image: url(../img/ebbandflow/seatrash_white.gif)">
 		</div>
 	</div>
 
@@ -45,19 +92,32 @@
 	    <div class="project-description">
 	        <button class="close-menu">Close &rarr;</button>
 	       <h2>Project Description:</h2>
-	        <h1>Seatrash</h1>
-	        <p>Trash, collected from the ocean, lakes, and rivers, is cast in resin to form hanging sculptures.
+	        <h1>'Ebb + Flow'</h1>
+	        <p>
+	        <a class="about-link" href="http://www.theimclab.com/">The IMC Lab + Gallery</a> is pleased to present “Ebb + Flow”, a solo exhibition by Daniel Baker. 
 	        <br>
-	        As an installation, the trash hangs from motors, which change the height in response to realtime data collected from weather buoys around the world's oceans.  The result is a realtime, data-driven, floating "sea of trash" that ebbs and flows with the tide.
-	        </p>
+	        <br>
+	        This exhibition is the result of Baker’s nine month participation in IMC’s Co-Create residency program, which pairs artists with technologists to enable the creation of new participatory and socially conscious art forms.
+	        <br>
+	        <br>
+	        During his residency at IMC, Baker has created a kinetic, data-driven network of motors and pulleys to create a visualization driven by the orbit of the moon and the ebb and flow of the tide.  Data, collected from weather buoys around the globe, stream in real-time to a system of physical computing electronics to raise and lower “floating” pieces of seatrash collected from various lakes, rivers, and oceans.
+	        <br>
+	        <br>
+	        The seatrash has been cast in resin, to preserve its current physical state and give it a rigid, durable plastic structure.  Each sea trash sculpture corresponds to a specific weather buoy, in locations such as New York City, Anchorage, Honolulu, New Orleans and Seattle.  
+	        <br>
+	        <br>
+	        As the moon orbits the earth, sea levels rise and fall, causing the sea trash to ebb and flow with the tide.
+	        <br>
+	        <br>
+	        <a class="about-link" href="http://www.arshake.com/en/ebb-flow-daniel-baker/">See what Arshake had to say about the project.</a>
 	    </div> 
 	    
-	</nav><!-- /slide menu right -->
+	</nav>
 
 	<!-- javascript -->
 	<script type="text/javascript" src="../js/classie.js"></script>
 	<script type="text/javascript" src="../js/nav.js"></script>
-	
+	<script type="text/javascript" src="../tideserver/tideserver_app.js"></script>
 	<script> 
 	    $(function(){
 	      $("#aboutContent").load("../inc/about.html"); 

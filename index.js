@@ -12,13 +12,13 @@ app.use(express.static('public/'));
 app.use(express.static('apps/tideserver/public/'));
 
 //port used for deployment
-server.listen(80, function() {
-	console.log('listening on *:80');
-});
-
-// server.listen(1337, function() {
-// 	console.log('listening on *:1337');
+// server.listen(80, function() {
+// 	console.log('listening on *:80');
 // });
+
+server.listen(1337, function() {
+	console.log('listening on *:1337');
+});
 
 server.on('connection', function(socket) {
 	console.log('new connection');
@@ -38,7 +38,7 @@ var _intervals = {};
 
 var getDataInterval = 1 * 1000; 
 
-var hours = 200;
+var hours = 300;
 
 var _endpoints = {
 	'sandyhook_nj': 'http://tidesandcurrents.noaa.gov/api/datagetter?range=' + hours + '&station=8531680&product=water_level&application=NOS.COOPS.TAC.WL&datum=MLLW&units=english&time_zone=gmt&application=ports_screen&format=json',

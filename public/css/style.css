@@ -175,6 +175,7 @@ a.about-link:hover {
 	display: inline-block;
 	width: 100%;
 	height: 80%;
+	/*margin-top: 5%;*/
 	/*border: 5px solid red;*/
 	background: black;
 	background-repeat: no-repeat;
