@@ -1,15 +1,21 @@
-<!doctype html>
-<html lang="en">
+<!-- web browser display for tide data -->
+<html>
+
 <head>
 	<meta charset="UTF-8">
+	<title>TIDESERVER</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<title>DNBKR</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" type="text/css"
-    media="screen and (max-width: 600px)"
-    href="css/mobile.css" />
+	
+	<link rel="stylesheet" type="text/css" href="/css/tideserver_style.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./../css/style.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px"		href="./../css/mobile.css" /> -->
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 </head>
+
 <body>
 	<div id="menu">
 		<button onclick="location.href='/index.html'">
@@ -20,86 +26,32 @@
 			<span>DNBKR</span>
 		</div>
 	</div>
+	<div id="tide">
 
-	<div class="container">
-		<a href="/projects/physarum.html">
-		<div class="thumb" style="background-image: url(../img/physarum_thumb.jpg)">
-			<div class="thumb_overlay">
-				<div class="thumb_text">
-					<span class="thumb_text">Cellular Networks</span>
-				</div>
-			</div>
-		</div>
-		</a>
-		
-		<a href="/projects/seatrash.html">
-		<div class="thumb" style="background-image: url(../img/ebbandflow/seatrash_texture_thumb.jpg)">
-			<div class="thumb_overlay">
-				<div class="thumb_text">
-					<span class="thumb_text">'Ebb & Flow'</span>
-				</div>
-			</div>
-		</div>
-		</a>
+		<div name="form" class="app">
+			<form name="inputForm">
+				<select name="stationLocation">
+					<option name="sandyhook_nj" value="sandyhook_nj">Sandy Hook, NJ
+					<option name="village_cove_alaska" value="village_cove_alaska">Village Cove, Alaska
+					<option name="nikika_alaska" value="nikika_alaska">Nikiska, Alaska
+					<option name="key_west_fl" value="key_west_fl">Key West, Florida
+					<option name="honolulu_hi" value="honolulu_hi">Honolulu, Hawaii
+					<option name="seattle_wa" value="seattle_wa">Seattle, Washington
+					<option name="pt_reyes_ca" value="pt_reyes_ca">Point Reyes, California
+				</select>
+				<br>
+				<input type="button" name="submit" value="Submit">
 
-		<a href="/projects/octopus.html">
-		<div class="thumb" style="background-image: url(../img/octopus_thumb.jpg)">
-			<div class="thumb_overlay">
-				<div class="thumb_text">
-					<span class="thumb_text">The Octopus Project</span>
-				</div>
-			</div>
+			</form>
 		</div>
-		</a>
 
-
-		<a href="/projects/muirgen.html">
-		<div class="thumb" style="background-image: url(../img/muirgen_thumb.jpg)">
-			<div class="thumb_overlay">
-				<div class="thumb_text">
-					<span class="thumb_text">Sealife Collage</span>
-				</div>
-			</div>
+		<div id="scatterPlot">
 		</div>
-		</a>
-		<a href="/projects/inks.html">
-		<div class="thumb" style="background-image: url(../img/inks/inks_dark_thumb.jpg)">
-			<div class="thumb_overlay">
-				<div class="thumb_text">
-					<span class="thumb_text">Ink on Glass</span>
-				</div>
-			</div>
-		</div>
-		</a>
-		<a href="/projects/tunnel.html">
-		<div class="thumb" style="background-image: url(../img/tunnel_thumb.jpg)">
-			<div class="thumb_overlay">
-				<div class="thumb_text">
-					<span class="thumb_text">'Tunnel in the Nocturnal Hum'</span>
-				</div>
-			</div>
-		</div>
-		</a>
 	</div>
-
-	<nav class="menu slide-menu-bottom">
-	    <div id="about">
-	    	<button class="close-menu">Close ↓</button>
-	    	<div id="aboutContent"></div>
-	    </div>
-	</nav>
-
-	<button class="nav-toggler toggle-slide-right"></button>
-	
-	<!-- javascript -->
-	<script type="text/javascript" src="js/classie.js"></script>
-	<script type="text/javascript" src="js/nav.js"></script>
-	<script> 
-	    $(function(){
-	      $("#aboutContent").load("inc/about.html"); 
-	    });
-	</script>
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="/tideserver_app.js"></script>
 	<!-- end javascript -->
-</body>
-</html>
 
+</body>
+
+</html>
