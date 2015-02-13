@@ -111,6 +111,7 @@ function getData(name, endpoint) {
 
 }
 
+//THIS is the data that gets sent to piserver/arduino
 var getRealtimeData = {
 
 	interval: 1000,
